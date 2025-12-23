@@ -9,14 +9,7 @@ public sealed class Cinema : Organization, IContactable
     public string DirectorFullName { get; set; } = string.Empty;
     public string OwnerFullName { get; set; } = string.Empty;
 
-    /// <summary>
-    /// В UML указан метод updateInfo(). В рамках UI он не обязателен,
-    /// но оставлен как точка расширения (например, для пересчётов/валидации).
-    /// </summary>
-    public void UpdateInfo()
-    {
-        // Здесь можно выполнять дополнительную валидацию/нормализацию данных.
-    }
+    public void UpdateInfo(){}
 
     public string GetContactInfo()
         => $@"Кинотеатр: {Name}; адрес: {Address.ToDisplayString()}; тел.: {Phone}";

@@ -22,10 +22,6 @@ public sealed class JsonDataStore
 
     public string FilePath => _filePath;
 
-    /// <summary>
-    /// Путь по умолчанию: <корень проекта>/data/data.json
-    /// (корень проекта определяется по наличию *.sln или *.csproj).
-    /// </summary>
     public static string DefaultPath()
     {
         string projectRoot = FindProjectRoot() ?? AppContext.BaseDirectory;
